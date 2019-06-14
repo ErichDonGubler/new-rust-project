@@ -8,7 +8,7 @@ edition = "2018"
 repository = "https://github.com/erichdongubler/new-rust-project"
 keywords = ["template", "new", "project"]
 categories = []
-# license = ""
+license = "MPL 2.0"
 
 [badges]
 is-it-maintained-issue-resolution = { repository = "https://github.com/erichdongubler/new-rust-project" }

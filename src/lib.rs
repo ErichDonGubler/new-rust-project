@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2019 `new-rust-project` contributors
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ */
 //! This project is Erich's personal Rust starter kit for developing new libraries and binaries in
 //! Rust. You shouldn't be seeing this anywhere outside of his
 //! [`new-rust-project`](https://github.com/erichdongubler/new-rust-project) repo.
@@ -22,6 +29,17 @@
 //! ```
 //!
 //! ## Features
+//!
+//! ### Licensing
+//!
+//! This template uses [MPL 2.0]() by default. Erich's reasons for MPL by default here are:
+//!
+//! * Very permissive license in general
+//! * Patent protection for that project that suddenly takes off
+//! * Not-terribly-annoying copyleft
+//!
+//! When in doubt, remember that Erich is not a lawyer. change your own project to use what you
+//! deem appropriate.
 //!
 //! ### Contributing
 //!
