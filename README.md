@@ -1,6 +1,6 @@
 # New Rust Project
 
-[![Build Status](https://secure.travis-ci.org/new-rust-project.svg?branch=master)](https://travis-ci.org/new-rust-project)
+[![Build Status](https://secure.travis-ci.org/erichdongubler/new-rust-project.svg?branch=master)](https://travis-ci.org/erichdongubler/new-rust-project)
 <!-- NOTE: You can also use a Crates.io version of this license badge: https://shields.io/category/license -->
 [![License](https://raw.githubusercontent.com/erichdongubler/new-rust-project/master/LICENSE)](LICENSE.md)
 [![Crates.io](https://img.shields.io/crates/v/new-rust-project.svg)](https://crates.io/crates/new-rust-project)
