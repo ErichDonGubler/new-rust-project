@@ -1,0 +1,17 @@
+[package]
+name = "new-rust-project"
+description = "@ErichDonGubler's fancy template for new Rust projects"
+version = "0.1.0"
+authors = ["Erich Gubler <erichdongubler@gmail.com>"]
+edition = "2018"
+# homepage = "https://github.com/erichdongubler/new-rust-project"
+repository = "https://github.com/erichdongubler/new-rust-project"
+keywords = ["template", "new", "project"]
+categories = []
+# license = ""
+
+[badges]
+is-it-maintained-issue-resolution = { repository = "https://github.com/erichdongubler/new-rust-project" }
+is-it-maintained-open-issues = { repository = "https://github.com/erichdongubler/new-rust-project" }
+maintenance = { status = "experimental" }
+travis-ci = { repository = "erichdongubler/new-rust-project" }
