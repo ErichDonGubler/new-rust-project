@@ -20,7 +20,9 @@ matrix:
     - name: cargo-sync-readme
       rust: stable
       before_script:
-        - cargo install -f cargo-sync-readme
+        - cargo install cargo-update || echo "cargo-update already installed"
+        - cargo install cargo-sync-readme || echo "cargo-sync-readme already installed"
+        - cargo install-update -a
       script:
         - cargo sync-readme --check
     - name: Rustfmt
