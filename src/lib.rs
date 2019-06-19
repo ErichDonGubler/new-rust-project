@@ -76,7 +76,7 @@
 //!
 //! # CHANGELOG
 //!
-//! Yes, you should maintain a [`CHANGELOG`](CHANGELOG.md).
+//! Yes, you should maintain a [`CHANGELOG`](CHANGELOG.md). ;)
 //!
 //! ### More aggressive linting and tests
 //!
