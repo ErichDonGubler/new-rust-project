@@ -16,3 +16,6 @@ is-it-maintained-issue-resolution = { repository = "https://github.com/erichdong
 is-it-maintained-open-issues = { repository = "https://github.com/erichdongubler/new-rust-project" }
 maintenance = { status = "experimental" }
 travis-ci = { repository = "erichdongubler/new-rust-project" }
+
+[dev-dependencies]
+cargo-sync-readme = "0.2.0"

@@ -122,6 +122,21 @@
 )]
 #![allow(clippy::multiple_crate_versions)]
 
+#[test]
+fn check_readme_synchronized() {
+    use {
+        cargo_sync_readme::{extract_inner_doc, read_readme, transform_readme},
+        std::path::PathBuf,
+    };
+
+    let crate_docs = extract_inner_doc(file!(), false, false);
+    let readme_path = PathBuf::from(file!()).parent().and_then(|p| p.parent()).expect("unable to create path to README dir").join("README.md");
+    let current_readme_content = read_readme(readme_path).expect("unable to read README");
+    if transform_readme(&current_readme_content, crate_docs, false).unwrap() != current_readme_content {
+        panic!("README is not sync'd -- make sure to run `cargo sync-readme`");
+    }
+}
+
 #[cfg(test)]
 mod tests {
     #[test]
