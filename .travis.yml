@@ -36,7 +36,7 @@ matrix:
       before_script:
         - rustup component add clippy
       script:
-        - cargo clippy
+        - cargo clippy --release
     - env: NAME='cargo-travis'
       sudo: required # travis-ci/travis-ci#9061
       before_script:
@@ -61,6 +61,5 @@ matrix:
             - cmake
 
 script: |
-  cargo build --verbose &&
-  cargo test  --verbose &&
-  cargo doc   --verbose
+  cargo test  --verbose --release --all &&
+  cargo doc   --verbose --release

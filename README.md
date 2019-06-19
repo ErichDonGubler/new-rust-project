@@ -82,10 +82,12 @@ panic!("This should panic.");
 
 Yes, you should maintain a [`CHANGELOG`](CHANGELOG.md).
 
-### More aggressive linting
+### More aggressive linting and tests
 
 Several `rustc` and `clippy` lints have been enabled that Erich prefers. See the top of
 [`src/lib.rs`](src/lib.rs) for the full list.
+
+Warnings are denied in doctests and in release mode.
 
 ### Out-of-the-box CI
 

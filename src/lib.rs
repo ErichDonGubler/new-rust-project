@@ -75,10 +75,12 @@
 //!
 //! Yes, you should maintain a [`CHANGELOG`](CHANGELOG.md).
 //!
-//! ### More aggressive linting
+//! ### More aggressive linting and tests
 //!
 //! Several `rustc` and `clippy` lints have been enabled that Erich prefers. See the top of
 //! [`src/lib.rs`](src/lib.rs) for the full list.
+//!
+//! Warnings are denied in doctests and in release mode.
 //!
 //! ### Out-of-the-box CI
 //!
@@ -95,17 +97,30 @@
 //! internal or private projects that won't actually be published on `crates.io`. You are
 //! encouraged to keep the ones you want and throw out the rest.
 
+#![cfg_attr(not(debug_assertions), deny(warnings))]
 #![doc(html_playground_url = "https://play.rust-lang.org/")]
 #![doc(html_root_url = "https://docs.rs/new-rust-project/0.1")]
 #![doc(test(attr(deny(warnings))))]
+#![doc(test(attr(warn(
+    bare_trait_objects,
+    clippy::cargo,
+    clippy::pedantic,
+    elided_lifetimes_in_paths,
+    missing_copy_implementations,
+    single_use_lifetimes,
+    unused_extern_crates,
+))))]
 #![warn(
     bare_trait_objects,
+    clippy::cargo,
+    clippy::pedantic,
     elided_lifetimes_in_paths,
     missing_copy_implementations,
     missing_docs,
     single_use_lifetimes,
     unused_extern_crates,
 )]
+#![allow(clippy::multiple_crate_versions)]
 
 #[cfg(test)]
 mod tests {
