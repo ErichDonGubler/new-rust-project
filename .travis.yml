@@ -10,6 +10,24 @@ os:
   - macos
   - windows
 
+# Dependencies of kcov, used by coverage
+addons:
+  apt:
+    packages:
+      - libcurl4-openssl-dev
+      - libelf-dev
+      - libdw-dev
+      - binutils-dev
+      - cmake # also required for cargo-update
+    sources:
+      - kalak
+
+before_script:
+  - export PATH=$HOME/.cargo/bin:$PATH
+  - cargo install cargo-update || echo "cargo-update already installed"
+  - cargo install cargo-travis || echo "cargo-travis already installed"
+  - cargo install-update -aris-cmake
+
 matrix:
   fast_finish: true
   allow_failures:
@@ -17,14 +35,6 @@ matrix:
     - env: NAME='cargo-travis'
     - rust: nightly
   include:
-    - name: cargo-sync-readme
-      rust: stable
-      before_script:
-        - cargo install cargo-update || echo "cargo-update already installed"
-        - cargo install cargo-sync-readme || echo "cargo-sync-readme already installed"
-        - cargo install-update -a
-      script:
-        - cargo sync-readme --check
     - name: Rustfmt
       rust: stable
       before_script:
@@ -37,29 +47,10 @@ matrix:
         - rustup component add clippy
       script:
         - cargo clippy --release
-    - env: NAME='cargo-travis'
-      sudo: required # travis-ci/travis-ci#9061
-      before_script:
-        - cargo install cargo-update || echo "cargo-update already installed"
-        - cargo install cargo-travis || echo "cargo-travis already installed"
-        - cargo install-update -a
-      script:
-        - |
-          cargo build    --verbose &&
-          cargo kcov     --verbose &&
-          bash <(curl -s https://codecov.io/bash) -s target/kcov
-        - |
-          cargo doc --verbose &&
-          cargo doc-upload
-      addons: # required for kcov
-        apt:
-          packages:
-            - libcurl4-openssl-dev
-            - libelf-dev
-            - libdw-dev
-            - binutils-dev
-            - cmake
 
 script: |
   cargo test  --verbose --release --all &&
   cargo doc   --verbose --release
+
+after_success:
+  - cargo coveralls
