@@ -144,11 +144,3 @@ fn check_readme_synchronized() {
 fn test_html_root_url() {
     version_sync::assert_html_root_url_updated!("src/lib.rs");
 }
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
