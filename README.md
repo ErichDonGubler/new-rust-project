@@ -78,6 +78,16 @@ panic!("This should panic.");
 !@#$% // This should fail to compile.
 ```
 
+### Intelligent defaults for docs
+
+The [Rust Playground](https://play.rust-lang.org/) is used as the playground service by
+default.
+
+### `cargo-release` configuration
+
+`cargo-release` is configured to keep features of this template in sync with version releases,
+and has some defaults Erich considers more sensible.
+
 # CHANGELOG
 
 Yes, you should maintain a [`CHANGELOG`](CHANGELOG.md).
