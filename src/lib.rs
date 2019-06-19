@@ -99,7 +99,7 @@
 
 #![cfg_attr(not(debug_assertions), deny(warnings))]
 #![doc(html_playground_url = "https://play.rust-lang.org/")]
-#![doc(html_root_url = "https://docs.rs/new-rust-project/0.1")]
+// UNCOMMENT_BEFORE_RELEASE: #![doc(html_root_url = "https://docs.rs/new-rust-project/0.1.2")]
 #![doc(test(attr(deny(warnings))))]
 #![doc(test(attr(warn(
     bare_trait_objects,
@@ -135,6 +135,11 @@ fn check_readme_synchronized() {
     if transform_readme(&current_readme_content, crate_docs, false).unwrap() != current_readme_content {
         panic!("README is not sync'd -- make sure to run `cargo sync-readme`");
     }
+}
+
+#[test]
+fn test_html_root_url() {
+    version_sync::assert_html_root_url_updated!("src/lib.rs");
 }
 
 #[cfg(test)]
