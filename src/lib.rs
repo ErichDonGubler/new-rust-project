@@ -132,14 +132,14 @@ fn check_readme_synchronized() {
         std::path::PathBuf,
     };
 
-    let crate_docs = extract_inner_doc(file!(), false, false);
+    let crate_docs = extract_inner_doc(file!(), false, cfg!(windows));
     let readme_path = PathBuf::from(file!())
         .parent()
         .and_then(|p| p.parent())
         .expect("unable to create path to README dir")
         .join("README.md");
     let current_readme_content = read_readme(readme_path).expect("unable to read README");
-    if transform_readme(&current_readme_content, crate_docs, false).unwrap()
+    if transform_readme(&current_readme_content, crate_docs, cfg!(windows)).unwrap()
         != current_readme_content
     {
         panic!("README is not sync'd -- make sure to run `cargo sync-readme`");
