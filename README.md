@@ -1,6 +1,5 @@
 # New Rust Project
 
-[![Build Status](https://secure.travis-ci.org/erichdongubler/new-rust-project.svg?branch=master)](https://travis-ci.org/erichdongubler/new-rust-project)
 <!-- NOTE: You can also use a Crates.io version of this license badge: https://shields.io/category/license -->
 [![License](https://img.shields.io/github/license/erichdongubler/new-rust-project.svg)](LICENSE.md)
 [![Crates.io](https://img.shields.io/crates/v/new-rust-project.svg)](https://crates.io/crates/new-rust-project)
@@ -9,6 +8,7 @@
 [![repo activity](https://img.shields.io/github/commit-activity/m/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/pulse/monthly)
 [![last commit](https://img.shields.io/github/last-commit/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/commits)
 [![contributors](https://img.shields.io/github/contributors/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/graphs/contributors)
+[![Build Status](https://secure.travis-ci.org/erichdongubler/new-rust-project.svg?branch=master)](https://travis-ci.org/erichdongubler/new-rust-project)
 
 <!-- cargo-sync-readme start -->
 
