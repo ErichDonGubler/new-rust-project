@@ -25,7 +25,7 @@
 //!
 //! ### Licensing
 //!
-//! This template uses [MPL 2.0]() by default. Erich's reasons for MPL by default here are:
+//! This template uses [MPL 2.0](LICENSE.md) by default. Erich's reasons for MPL by default here are:
 //!
 //! * Very permissive license in general
 //! * Patent protection for that project that suddenly takes off
