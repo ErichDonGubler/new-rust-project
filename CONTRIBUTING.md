@@ -30,9 +30,9 @@ why your change is valuable!
 
 ### "I want to make a feature/pull request, but I'm not sure how it'll be received."
 
-If it's relatively minor, just make a PR/issue. If there are design
-implications for a given pull request and you want to test the waters for
-concerns the project will have and/or how it will be received, feel free to
+If it's relatively minor, just file your choice of a PR or issue. If there are
+design implications for a given pull request and you want to test the waters
+for concerns the project will have and/or how it will be received, feel free to
 make an issue on the [tracker on
 Github](https://github.com/ErichDonGubler/new-rust-project/issues) to open a
 discussion.
