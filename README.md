@@ -53,9 +53,6 @@ deem appropriate.
 Contributions, feature requests, and bug reports are warmly welcomed! See the [contribution
 guidelines](CONTRIBUTING.md) for getting started.
 
-See also the [code of conduct](CODE_OF_CONDUCT.md) for more details about expectations
-regarding contributions to this project.
-
 The [code of conduct](CODE_OF_CONDUCT.md) uses [Contributor Covenant
 v1.4.1](https://www.contributor-covenant.org/version/1/4/code-of-conduct). If there's a newer
 version of this, feel free to open a PR!
