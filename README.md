@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/github/license/erichdongubler/new-rust-project.svg)](LICENSE.md)
 [![Crates.io](https://img.shields.io/crates/v/new-rust-project.svg)](https://crates.io/crates/new-rust-project)
 [![Docs.rs](https://docs.rs/new-rust-project/badge.svg)](https://docs.rs/new-rust-project)
+
 [![last release date](https://img.shields.io/github/release-date/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/releases)
 [![repo activity](https://img.shields.io/github/commit-activity/m/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/pulse/monthly)
 [![last commit](https://img.shields.io/github/last-commit/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/commits)
