@@ -1,0 +1,2 @@
+#! /bin/sh
+touch src/lib.rs && cargo clippy && cargo test --all && { cargo fmt -- --check || echo "\`cargo fmt\` failed" >&2; }
