@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/github/license/erichdongubler/new-rust-project.svg)](LICENSE.md)
 [![Crates.io](https://img.shields.io/crates/v/new-rust-project.svg)](https://crates.io/crates/new-rust-project)
 [![Docs.rs](https://docs.rs/new-rust-project/badge.svg)](https://docs.rs/new-rust-project)
+[![Matrix chat](https://img.shields.io/matrix/new-rust-project:matrix.org.svg)](https://matrix.to/#/#new-rust-project:matrix.org)
 
 [![last release date](https://img.shields.io/github/release-date/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/releases)
 [![repo activity](https://img.shields.io/github/commit-activity/m/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/pulse/monthly)
@@ -104,11 +105,14 @@ The associated CI configuration (Travis at [`.travis.yml`](.travis.yml)) tests:
 * Formatting with `cargo fmt`
 * The full suite of built-in tests with `cargo test`
 
-### Buttons!
+### Badges!
 
-There are a variety of handy buttons on the top of the README. These are meant to encourage
-activity both for maintainers and newcomers. Some buttons may not be suitable for, say,
-internal or private projects that won't actually be published on `crates.io`. You are
-encouraged to keep the ones you want and throw out the rest.
+There are a variety of handy badges on the top of the README. The first row of badges are
+intended to aid crate users, while the second is intended for (maybe potential) contributors.
+Some badges may not be suitable for, say, internal or private projects that won't actually be
+published on `crates.io`. You are encouraged to keep the ones you want and throw out the rest.
+
+If you're curious what other badges you can get out-of-the-box, check out
+[Shields.io](https://shields.io).
 
 <!-- cargo-sync-readme end -->

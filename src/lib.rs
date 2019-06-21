@@ -90,12 +90,15 @@
 //! * Formatting with `cargo fmt`
 //! * The full suite of built-in tests with `cargo test`
 //!
-//! ### Buttons!
+//! ### Badges!
 //!
-//! There are a variety of handy buttons on the top of the README. These are meant to encourage
-//! activity both for maintainers and newcomers. Some buttons may not be suitable for, say,
-//! internal or private projects that won't actually be published on `crates.io`. You are
-//! encouraged to keep the ones you want and throw out the rest.
+//! There are a variety of handy badges on the top of the README. The first row of badges are
+//! intended to aid crate users, while the second is intended for (maybe potential) contributors.
+//! Some badges may not be suitable for, say, internal or private projects that won't actually be
+//! published on `crates.io`. You are encouraged to keep the ones you want and throw out the rest.
+//!
+//! If you're curious what other badges you can get out-of-the-box, check out
+//! [Shields.io](https://shields.io).
 
 #![cfg_attr(not(debug_assertions), deny(warnings))]
 #![doc(html_playground_url = "https://play.rust-lang.org/")]
