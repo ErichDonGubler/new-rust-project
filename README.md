@@ -9,7 +9,7 @@
 [![last release date](https://img.shields.io/github/release-date/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/releases)
 [![repo activity](https://img.shields.io/github/commit-activity/m/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/pulse/monthly)
 [![contributors](https://img.shields.io/github/contributors/erichdongubler/new-rust-project.svg)](https://github.com/erichdongubler/new-rust-project/graphs/contributors)
-[![Build Status](https://secure.travis-ci.org/erichdongubler/new-rust-project.svg?branch=master)](https://travis-ci.org/erichdongubler/new-rust-project)
+[![Build Status](https://secure.travis-ci.org/erichdongubler/new-rust-project.svg?branch=master)](https://travis-ci.com/erichdongubler/new-rust-project)
 
 <!-- cargo-sync-readme start -->
 
