@@ -111,7 +111,6 @@
     elided_lifetimes_in_paths,
     missing_copy_implementations,
     single_use_lifetimes,
-    unused_extern_crates,
 ))))]
 #![warn(
     bare_trait_objects,
