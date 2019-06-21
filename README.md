@@ -86,7 +86,7 @@ default.
 `cargo-release` is configured to keep features of this template in sync with version releases,
 and has some defaults Erich considers more sensible.
 
-# CHANGELOG
+### CHANGELOG
 
 Yes, you should maintain a [`CHANGELOG`](CHANGELOG.md). ;)
 
