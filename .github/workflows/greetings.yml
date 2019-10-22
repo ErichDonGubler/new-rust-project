@@ -1,0 +1,16 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: &msg |
+          Hey there! Looks like this is your first contribution! Welcome! :slight_smile: We're excited to have you!
+          
+          If you haven't already, be sure to check out the [code of conduct](https://github.com/${{ GITHUB_REPOSITORY }}/blob/${{ GITHUB_SHA }}/CODE_OF_CONDUCT.md).
+        pr-message: *msg
