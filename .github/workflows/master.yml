@@ -1,6 +1,6 @@
 on: [push, pull_request]
 
-name: `master` checks
+name: "Basic code checks"
 
 jobs:
   check:
