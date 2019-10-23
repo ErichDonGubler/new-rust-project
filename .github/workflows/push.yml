@@ -2,8 +2,9 @@ name: Push checks
 
 on: [push]
 
-_reused_parts:
-  all_platforms: &all_platforms
+jobs:
+  check:
+    name: Check
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -11,24 +12,15 @@ _reused_parts:
         rust:
           - stable
           - beta
-  checkout_step: &checkout_step
-    - name: Checkout sources
-      uses: actions/checkout@v1
-  toolchain_step: &toolchain_step
-    - name: Install toolchain
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: ${{ matrix.rust }}
-        override: true
-
-jobs:
-  check:
-    << : *all_platforms
-    name: Check
     steps:
-      - *checkout_step
+      - name: Checkout sources
+        uses: actions/checkout@v1
 
-      - *toolchain_step
+      - name: Install toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: ${{ matrix.rust }}
+          override: true
 
       - name: "Run `cargo check`"
         uses: actions-rs/cargo@v1
@@ -36,12 +28,23 @@ jobs:
           command: check
 
   test:
-    << : *all_platforms
     name: Test Suite
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        rust:
+          - stable
+          - beta
     steps:
-      - *checkout_step
+      - name: Checkout sources
+        uses: actions/checkout@v1
 
-      - *toolchain_step
+      - name: Install toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: ${{ matrix.rust }}
+          override: true
 
       - name: "Run `cargo test`"
         uses: actions-rs/cargo@v1
@@ -50,16 +53,20 @@ jobs:
 
   fmt:
     name: Rustfmt
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         rust:
           - stable
     steps:
-      - *checkout_step
+      - name: Checkout sources
+        uses: actions/checkout@v1
 
-      - << : *toolchain_step
+      - name: Install toolchain
+        uses: actions-rs/toolchain@v1
         with:
+          toolchain: ${{ matrix.rust }}
+          override: true
           components: rustfmt
 
       - name: "Run `cargo fmt`"
@@ -69,13 +76,23 @@ jobs:
           args: --all -- --check
 
   clippy:
-    << : *all_platforms
     name: Clippy
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        rust:
+          - stable
+          - beta
     steps:
-      - *checkout_step
+      - name: Checkout sources
+        uses: actions/checkout@v1
 
-      - << : *toolchain_step
+      - name: Install toolchain
+        uses: actions-rs/toolchain@v1
         with:
+          toolchain: ${{ matrix.rust }}
+          override: true
           components: clippy
 
       - name: "Run `cargo clippy`"
