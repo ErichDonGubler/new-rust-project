@@ -110,7 +110,15 @@
     clippy::pedantic,
     elided_lifetimes_in_paths,
     missing_copy_implementations,
+    missing_debug_implementations,
     single_use_lifetimes,
+    trivial_casts,
+    trivial_numeric_casts,
+    unreachable_pub,
+    unused_extern_crates,
+    unused_import_braces,
+    unused_qualifications,
+    variant_size_differences,
 ))))]
 #![warn(
     bare_trait_objects,
@@ -119,10 +127,22 @@
     elided_lifetimes_in_paths,
     missing_copy_implementations,
     missing_docs,
+    missing_debug_implementations,
     single_use_lifetimes,
-    unused_extern_crates
+    trivial_casts,
+    trivial_numeric_casts,
+    unreachable_pub,
+    unused_extern_crates,
+    unused_import_braces,
+    unused_qualifications,
+    variant_size_differences,
 )]
-#![allow(clippy::multiple_crate_versions)]
+#![allow(
+    clippy::default_trait_access,
+    clippy::cargo_common_metadata,
+    clippy::multiple_crate_versions
+)]
+
 
 #[test]
 fn check_readme_synchronized() {
