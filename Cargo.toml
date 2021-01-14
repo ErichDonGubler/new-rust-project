@@ -19,4 +19,4 @@ travis-ci = { repository = "erichdongubler/new-rust-project" }
 
 [dev-dependencies]
 version-sync = "0.8.1"
-cargo-sync-readme = "0.2.0"
+cargo-sync-readme = "1.1.0"
