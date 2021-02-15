@@ -18,5 +18,5 @@ maintenance = { status = "experimental" }
 travis-ci = { repository = "erichdongubler/new-rust-project" }
 
 [dev-dependencies]
-version-sync = "0.8.1"
+version-sync = "0.9.2"
 cargo-sync-readme = "0.2.0"
